@@ -1,0 +1,29 @@
+{
+    "name": "crawler",
+    "title": "Crawler",
+    "description": "A system to play a simple dungeon crawler.",
+    "version": "0.01",
+    "minimumCoreVersion": "0.7.9",
+    "compatibleCoreVersion": "0.7.9",
+    "templateVersion": 1,
+    "author": "Tabulazero",
+    "esmodules": ["crawler.js"],
+    "styles": ["styles/crawler.css"],
+    "packs": [],
+    "socket":true,
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "gridDistance": 5,
+    "gridUnits": "ft",
+    "primaryTokenAttribute": "HP",
+    "secondaryTokenAttribute": "Mana",
+    "initiative": "@Agility",
+    "url": "",
+    "manifest": "",
+    "download": ""
+}

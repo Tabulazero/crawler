@@ -1,0 +1,58 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </header>
+    <div>
+        <table>
+            <tr>
+                <th>{{localize "crawler.WeaponHeader.AbilityUsed"}}</th>
+                <th>{{localize "crawler.WeaponHeader.Pattern"}}</th>
+                <th>{{localize "crawler.WeaponHeader.Range"}}</th>
+                <th>{{localize "crawler.WeaponHeader.Hands"}}</th>
+                <th>{{localize "crawler.WeaponHeader.Special"}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="data.AttackWith">
+                        {{#select data.AttackWith}}
+                        {{#each config.AttackWith as |name type|}}
+                        <option value ="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+                <td>
+                    <select name="data.AttackPattern">
+                        {{#select data.AttackPattern}}
+                        {{#each config.AttackPattern as |name type|}}
+                        <option value ="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+                <td>
+                    <input name="data.Range" type="text" value="{{data.Range}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <select name="data.Hand">
+                        {{#select data.Hand}}
+                        {{#each config.WeaponHand as |name type|}}
+                        <option value ="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+                <td>
+                    <input name="data.Special" type="text" value="{{data.Special}}" data-dtype="text" />
+                </td>
+            </tr>
+        </table>
+        {{editor content=data.description target="data.description" button=true owner=owner editable=edit}}
+        <div>
+            <p>{{localize "crawler.WeaponFooter.Cost"}}</p>
+            <input name="data.Price" type="text" value="{{data.Price}}" data-dtype="Number" />
+            <p>{{localize "crawler.WeaponFooter.po"}}</p>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,127 @@
+{
+    "Actor": {},
+    "Item":{
+        "types":[
+            "Light Weapon",
+            "Common Weapon",
+            "Heavy Weapon",
+            "Ranged Weapon",
+            "Armor",
+            "Utility Item"
+        ],
+        "templates":{
+            "ItemDescription":{
+                "Description":"My description"
+            },
+            "ItemPrice":{
+                "Price": 0
+            }
+        },
+        "weapon":{
+            "WeaponAttackWith":{
+                "AttackWith":""
+            },
+            "WeaponAttackPattern":{
+                "AttackPattern":""
+            },
+            "WeaponRange":{
+                "Range": 1
+            },
+            "WeaponHand":{
+                "Hand": 1
+            },
+            "WeaponAttackBonus":{
+                "AttackBonus": 0
+            },
+            "WeaponAttackBonusTarget":{
+                "AttackBonusTarget":""
+            },
+            "WeaponFlatAttackBonus":{
+                "FlatAttackBonus": 0
+            },
+            "WeaponIsFragile":{
+                "IsFragile":"N"
+            },
+            "WeaponMinVigor":{
+                "MinVigor": 0
+            },
+            "WeaponSpecial":{
+                "Special": []
+            }
+        },
+        "Light Weapon":{
+            "templates":[
+                "ItemDescription",
+                "ItemPrice"
+            ],
+            "weapon":[
+                "WeaponAttackWith",
+                "WeaponAttackPattern",
+                "WeaponHand",
+                "WeaponRange",
+                "WeaponSpecial"
+            ] 
+        },
+        "Common Weapon":{
+            "templates":[
+                "ItemDescription",
+                "ItemPrice"
+            ],
+            "weapon":[
+                "WeaponAttackWith",
+                "WeaponAttackPattern",
+                "WeaponHand",
+                "WeaponRange",
+                "WeaponAttackBonus",
+                "WeaponAttackBonusTarget",
+                "WeaponSpecial"
+            ] 
+        },
+        "Heavy Weapon":{
+            "templates":[
+                "ItemDescription",
+                "ItemPrice"
+            ],
+            "weapon":[
+                "WeaponAttackWith",
+                "WeaponAttackPattern",
+                "WeaponHand",
+                "WeaponRange",
+                "WeaponFlatAttackBonus",
+                "WeaponMinVigor",
+                "WeaponSpecial"
+            ] 
+        },
+        "Ranged Weapon":{
+            "templates":[
+                "ItemDescription",
+                "ItemPrice"
+            ],
+            "weapon": [
+                "WeaponAttackWith",
+                "WeaponAttackPattern",
+                "WeaponHand",
+                "WeaponRange",
+                "WeaponFlatAttackBonus",
+                "WeaponMinVigor",
+                "WeaponSpecial"
+            ] 
+        },
+        "Armor":{
+            "templates":[
+                "ItemDescription",
+                "ItemPrice"
+            ],
+            "DefenseBonus": 0,
+            "DefenseBonusRanged": 0,
+            "WeaponHand": 0,
+            "MovePenalty": 0
+        },
+        "Utility Item":{
+            "templates":[
+                "ItemDescription",
+                "ItemPrice"
+            ]
+        }
+    }
+}

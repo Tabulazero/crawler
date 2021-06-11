@@ -1,0 +1,35 @@
+{
+    "crawler":{
+        "AbilityName":{
+            "Strength": "Strength",
+            "Agility": "Agility",
+            "Stamina": "Stamina",
+            "Intelligence": "Intelligence",
+            "Perception": "Perception",
+            "Move": "Move",
+            "PhyDef": "Physical Defense",
+            "MagDef": "Magical Defense",
+            "HP": "Hit Points",
+            "Mana": "Mana"
+        },
+        "AttackPatern":{
+            "plus": "+",
+            "multiply":"*"
+        },
+        "WeaponHeader":{
+            "AbilityUsed": "Ability used",
+            "Pattern": "Attack pattern",
+            "Hands": "# of Hands",
+            "Range": "Range",
+            "Special": "Special"
+        },
+        "WeaponFooter":{
+            "Cost": "Cost:",
+            "po": "po"
+        },
+        "WeaponHand":{
+            "Hand1": "1-handed",
+            "Hand2": "2-handed"
+        }
+    }
+}
