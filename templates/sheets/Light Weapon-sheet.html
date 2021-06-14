@@ -48,7 +48,9 @@
                 </td>
             </tr>
         </table>
-        {{editor content=data.description target="data.description" button=true owner=owner editable=edit}}
+        <div>
+            {{editor content=data.description target="data.description" button=true owner=owner editable=edit}}
+        </div>
         <div>
             <p>{{localize "crawler.WeaponFooter.Cost"}}</p>
             <input name="data.Price" type="text" value="{{data.Price}}" data-dtype="Number" />
