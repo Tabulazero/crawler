@@ -7,7 +7,7 @@
 		{
 			"label": "Less Compile",
 			"type": "shell",
-			"command": "lessc less/crawler.less styles/crawler.css",
+			"command": "lessc less/crawler.less ./crawler.css",
 			"group": "build",
 			"problemMatcher": []
 		}

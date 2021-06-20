@@ -4,7 +4,7 @@
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
     </header>
     <div class="sheet-content">
-        <table>
+        <table class="table-content">
             <tr>
                 <th>{{localize "crawler.WeaponHeader.AbilityUsed"}}</th>
                 <th>{{localize "crawler.WeaponHeader.Pattern"}}</th>
@@ -16,7 +16,7 @@
                 <td>
                     <select name="data.AttackWith">
                         {{#select data.AttackWith}}
-                        {{#each config.AttackWith as |name type|}}
+                        {{#each config.AttackWithSelection as |name type|}}
                         <option value ="{{type}}">{{localize name}}</option>
                         {{/each}}
                         {{/select}}
@@ -25,7 +25,7 @@
                 <td>
                     <select name="data.AttackPattern">
                         {{#select data.AttackPattern}}
-                        {{#each config.AttackPattern as |name type|}}
+                        {{#each config.AttackPatternSelection as |name type|}}
                         <option value ="{{type}}">{{localize name}}</option>
                         {{/each}}
                         {{/select}}
@@ -37,7 +37,7 @@
                 <td>
                     <select name="data.Hand">
                         {{#select data.Hand}}
-                        {{#each config.WeaponHand as |name type|}}
+                        {{#each config.WeaponHandSelection as |name type|}}
                         <option value ="{{type}}">{{localize name}}</option>
                         {{/each}}
                         {{/select}}
@@ -48,9 +48,7 @@
                 </td>
             </tr>
         </table>
-        <div>
-            {{editor content=data.description target="data.description" button=true owner=owner editable=edit}}
-        </div>
+        {{editor content=data.Description target="data.Description" button=true Owner=Owner editable=editable}}
         <div>
             <p>{{localize "crawler.WeaponFooter.Cost"}}</p>
             <input name="data.Price" type="text" value="{{data.Price}}" data-dtype="Number" />
