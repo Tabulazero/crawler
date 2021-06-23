@@ -4,7 +4,7 @@
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
     </header>
     <div class="sheet-content">
-        <table class="table-content">
+        <table>
             <tr>
                 <th>{{localize "crawler.WeaponHeader.AbilityUsed"}}</th>
                 <th>{{localize "crawler.WeaponHeader.Pattern"}}</th>
@@ -14,34 +14,40 @@
             </tr>
             <tr>
                 <td>
-                    <select name="data.AttackWith">
-                        {{#select data.AttackWith}}
-                        {{#each config.AttackWithSelection as |name type|}}
-                        <option value ="{{type}}">{{localize name}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
+                    <div class="form-group">
+                        <select name="data.AttackWith">
+                            {{#select data.AttackWith}}
+                            {{#each config.AttackWith as |name type|}}
+                            <option value ="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}}
+                        </select>
+                    </div>
                 </td>
                 <td>
-                    <select name="data.AttackPattern">
-                        {{#select data.AttackPattern}}
-                        {{#each config.AttackPatternSelection as |name type|}}
-                        <option value ="{{type}}">{{localize name}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
+                    <div class="form-group">
+                        <select name="data.AttackPattern">
+                            {{#select data.AttackPattern}}
+                            {{#each config.AttackPattern as |name type|}}
+                            <option value ="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}}
+                        </select>
+                    </div>
                 </td>
                 <td>
                     <input name="data.Range" type="text" value="{{data.Range}}" data-dtype="Number" />
                 </td>
                 <td>
-                    <select name="data.Hand">
-                        {{#select data.Hand}}
-                        {{#each config.WeaponHandSelection as |name type|}}
-                        <option value ="{{type}}">{{localize name}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
+                    <div class="form-group">
+                        <select name="data.Hand">
+                            {{#select data.Hand}}
+                            {{#each config.Hand as |name type|}}
+                            <option value ="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}}
+                        </select>
+                    </div>
                 </td>
                 <td>
                     <input name="data.Special" type="text" value="{{data.Special}}" data-dtype="text" />
