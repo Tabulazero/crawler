@@ -2,7 +2,7 @@
     "Actor": {},
     "Item":{
         "types":[
-            "Light Weapon"
+            "LightWeapon"
         ],
         "templates":{
             "ItemDescription":{
@@ -10,19 +10,33 @@
             },
             "ItemPrice":{
                 "Price": 5
+            },
+            "WeaponAttackWith":{
+                "AttackWith": "Strength"
+            },
+            "WeaponAttackPattern":{
+                "AttackPattern": "+"
+            },
+            "WeaponHand":{
+                "Hand":"1-Handed"
+            },
+            "WeaponRange":{
+                "Range": 1
+            },
+            "WeaponSpecial":{
+                "Special":"none"
             }
         },
-        "Light Weapon":{
+        "LightWeapon":{
             "templates":[
                 "ItemDescription",
-                "ItemPrice"
-            ],
-            "AttackWith": "Agility",
-            "AttackPattern": "+",
-            "Hand":"1-Handed",
-            "Range": 1,
-            "Special":"none"
-            
+                "ItemPrice",
+                "AttackWith",
+                "AttackPattern",
+                "Hand",
+                "Range",
+                "Special"
+            ]
         }
     }
 }
